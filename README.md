@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### TopNocth Tech
+
+- npx create-react-app topnotch-tech
+- cd to topnotch-tech
+- npm install
+- npm i bootstrap
+- src - components - Navbar.js
+- rfc
+- npm i react-router-dom
+  import { BrowserRouter, Route, Routes } from "react-router-dom";
+  <BrowserRouter>
+  <Routes>
+  <Route exact path="/" element={<Homescreen/>}/>
+  </Routes>
+  </BrowserRouter>
+
+- npm i react-rating
+https://www.npmjs.com/package/react-rating
+http://dreyescat.github.io/react-rating/
+# topnotch-tech

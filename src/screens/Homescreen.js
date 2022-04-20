@@ -7,7 +7,7 @@ export default function Homescreen() {
     <div>
       <div className="row justify-content-center">
         {products.map(product => {
-          return <Product product={product} />;
+          return <Product product={product}/>;
         })}
       </div>
     </div>

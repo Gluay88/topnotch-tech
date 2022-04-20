@@ -5,7 +5,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import Homescreen from "./screens/Homescreen";
 import Productdescreen from "./screens/Productdescreen";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 
 function App() {
   return (

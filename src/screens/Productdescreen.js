@@ -4,7 +4,7 @@ import products from "../products";
 
 export default function Productdescreen() {
   const { id } = useParams();
-  const product = products.find((p) => p._id === id.match.params);
+  const product = products.find((p) => p.id === parseInt(id));
 
   return (
     <div>

@@ -41,7 +41,8 @@ h1 {
   margin-right: 0 !important;
 }
 .bigimg {
-  height: 18.75rem !important;
+  /* height: 18.75rem !important; */
+  height: auto !important;
 }
 a {
   text-decoration: none !important;

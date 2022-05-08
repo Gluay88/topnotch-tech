@@ -68,7 +68,7 @@ code {
 }
 .btn-price:hover {
   background-color: rgb(162, 24, 0);
-  color:white;
+  color: white;
 }
 .btn-shopnow {
   width: 14rem;
@@ -128,3 +128,41 @@ p {
   align-items: center;
   margin-top: 4rem;
 }
+
+@media (orientation: portrait)  {
+  .banner-container {
+    flex-direction: column;
+    padding-top: 4rem;
+    display: block;
+    position: relative;
+  }
+  .banner-desc {
+    width: 100% !important;
+    text-align: center;
+    padding: 0;
+  }
+  .banner-img {
+    width: 100% !important;
+    margin: 3rem 0 8rem 0;
+  }
+  .banner-img img {
+    width: 60%;
+    height: auto;
+  }
+  .banner-desc h1 {
+    font-size: 3rem !important;
+    text-align: center !important;
+  }
+  .banner-desc p {
+    text-align: center !important;
+  }
+}
+
+/* @media only screen and (max-width: 600px) {
+  .banner-img {
+    margin-bottom: 0 !important;
+  }
+  .banner-container {
+    margin-top: -4rem !important;
+  }
+} */

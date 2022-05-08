@@ -13,11 +13,11 @@ code {
 }
 .navbar {
   background-color: rgb(17, 71, 116) !important;
-  padding-left: 1rem;
+  padding-left: 10rem;
 }
 .navbar-nav {
   margin-left: auto;
-  padding-right: 1rem;
+  padding-right: 10rem;
 }
 .nav-link {
   color: white !important;
@@ -29,6 +29,58 @@ code {
 .topnotch {
   color: rgb(173, 205, 254) !important;
   font-weight: 600 !important;
+}
+.banner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  margin-top: -3rem !important;
+}
+.banner-desc {
+  width: 50%;
+  text-align: left;
+  padding-left: 7.5rem;
+}
+.banner-desc h1 {
+  padding: 2rem 0;
+  color: rgb(17, 71, 116);
+  font-size: 5rem !important;
+}
+.banner-desc p {
+  font-size: 1.5rem !important;
+  margin-bottom: 3rem;
+}
+.banner-img {
+  width: 45%;
+}
+.banner-img img {
+  width: 100%;
+}
+.btn-price {
+  width: 8rem;
+  height: auto;
+  border: none;
+  background-color: rgb(17, 71, 116);
+  color: white;
+}
+.btn-price:hover {
+  background-color: rgb(162, 24, 0);
+  color:white;
+}
+.btn-shopnow {
+  width: 14rem;
+  height: 3rem;
+  border: none;
+  background-color: rgb(162, 24, 0);
+  border-radius: 3rem;
+  color: white;
+  font-size: 1.5rem;
+}
+.btn-shopnow:hover {
+  background-color: rgb(17, 71, 116);
 }
 h1 {
   font-size: 1.125rem !important;

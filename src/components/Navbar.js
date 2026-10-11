@@ -1,38 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
+  const { count } = useCart();
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  // Close the mobile menu after navigating.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand" href="/">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
           <span className="topnotch">TopNotch</span> Tech
-        </a>
+        </Link>
+        <Link className="nav-link mobile-cart d-lg-none" to="/cart" aria-label={`Cart, ${count} items`}>
+          <i className="fas fa-shopping-cart"></i>
+          {count > 0 && <span className="cart-badge">{count}</span>}
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={open}
           aria-label="Toggle navigation"
+          onClick={() => setOpen((o) => !o)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <i className={`fas ${open ? "fa-times" : "fa-bars"}`}></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`collapse navbar-collapse${open ? " show" : ""}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Login
-              </a>
+              <NavLink className="nav-link" to="/" end>
+                Shop
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="/">
-              <i class="fas fa-shopping-cart"></i>
-              </a>
+              <NavLink className="nav-link d-none d-lg-flex" to="/cart" aria-label={`Cart, ${count} items`}>
+                <i className="fas fa-shopping-cart"></i>
+                <span className="cart-label">Cart</span>
+                {count > 0 && <span className="cart-badge">{count}</span>}
+              </NavLink>
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }

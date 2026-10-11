@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/topnotch-tech/static/css/main.6c9276d3.css",
+    "main.js": "/topnotch-tech/static/js/main.59e4ae7d.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/topnotch-tech/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/headphone.jpeg": "/topnotch-tech/static/media/headphone.42ae47ae1ffe97d965f5.jpeg",
+    "index.html": "/topnotch-tech/index.html",
+    "main.6c9276d3.css.map": "/topnotch-tech/static/css/main.6c9276d3.css.map",
+    "main.59e4ae7d.js.map": "/topnotch-tech/static/js/main.59e4ae7d.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/topnotch-tech/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c9276d3.css",
+    "static/js/main.59e4ae7d.js"
+  ]
+}

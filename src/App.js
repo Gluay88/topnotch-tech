@@ -24,7 +24,8 @@ function ScrollToTop() {
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      {/* PUBLIC_URL is empty on Netlify and /topnotch-tech on GitHub Pages. */}
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ToastProvider>
           <ScrollToTop />
           <div className="App">

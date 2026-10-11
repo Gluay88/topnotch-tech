@@ -31,6 +31,11 @@ npm run build    # production build in /build
 
 ## Deployment
 
+- **Netlify** (primary): https://magnificent-blini-b769ee.netlify.app
+- **GitHub Pages** (backup): https://gluay88.github.io/topnotch-tech/ - publish
+  with `npm run deploy:pages`, which builds the site and pushes it to the
+  `gh-pages` branch. It does not update automatically, so rerun it after changes.
+
 The build is a static single-page app. Hosts must serve `index.html` for unknown
 paths so routes like `/product/3` work on refresh. `public/_redirects` handles this
 on Netlify; on Vercel add a rewrite to `/index.html`.

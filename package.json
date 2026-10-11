@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:pages": "PUBLIC_URL=/topnotch-tech npm run build && cp build/index.html build/404.html && gh-pages -d build"
+    "deploy:pages": "PUBLIC_URL=/topnotch-tech npm run build && cp build/index.html build/404.html && cp scripts/gh-pages-README.md build/README.md && gh-pages -d build --nojekyll -m \"Deploy site - do not delete: this branch serves the GitHub Pages backup\""
   },
   "eslintConfig": {
     "extends": [

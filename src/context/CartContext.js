@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 
-const STORAGE_KEY = "topnotch-cart";
+// Bump the version when product ids change so old carts don't point at the wrong items.
+const STORAGE_KEY = "topnotch-cart-v2";
 
 const CartContext = createContext(null);
 

@@ -21,8 +21,11 @@ npm run build    # production build in /build
 
 ## Before going live
 
-- **Replace the product data.** `src/products.js` contains demo listings copied from
-  Amazon for third-party brands. Swap in your own products, descriptions and photos.
+- **Check the catalog.** `src/products.js` has generic listings for current tech
+  (earbuds, AI laptop, OLED monitor, smartwatch, chargers and more) with original
+  descriptions. Match names, specs and prices to the exact products you stock.
+- **Use your own photos.** Product images in `src/assets/products/` are public-domain
+  stock (sources in `CREDITS.md`); replace them with photos of your actual items.
 - **Add real payments.** Checkout currently saves the order in the browser only - no
   card is charged and nothing is sent to you. Connect a payment provider (e.g. Stripe
   Checkout) and an order backend; `src/utils/orders.js` is the place to swap in API calls.

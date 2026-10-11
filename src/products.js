@@ -1,3 +1,7 @@
+// DEMO DATA - replace before launch.
+// These names, descriptions and images are copied from Amazon listings for
+// third-party brands. Swap in your own catalog and product photos (e.g. in
+// src/assets or public/images) before running this as a commercial site.
 const products = [
   {
     id: 1,

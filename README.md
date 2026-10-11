@@ -1,91 +1,36 @@
-# Getting Started with Create React App
+# TopNotch Tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React storefront for electronics and accessories.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Product catalog with search and category filter
+- Product detail pages with stock status and quantity picker
+- Shopping cart that persists in the browser (localStorage)
+- Checkout form with validation, order summary (shipping + tax) and order confirmation
+- Responsive layout with a mobile menu and always-visible cart icon
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm start        # dev server at http://localhost:3000
+npm test         # run tests
+npm run build    # production build in /build
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Before going live
 
-### `npm test`
+- **Replace the product data.** `src/products.js` contains demo listings copied from
+  Amazon for third-party brands. Swap in your own products, descriptions and photos.
+- **Add real payments.** Checkout currently saves the order in the browser only - no
+  card is charged and nothing is sent to you. Connect a payment provider (e.g. Stripe
+  Checkout) and an order backend; `src/utils/orders.js` is the place to swap in API calls.
+- **Pricing rules** (free shipping threshold, shipping fee, tax rate) live in
+  `src/utils/format.js`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### TopNocth Tech
-
-- npx create-react-app topnotch-tech
-- cd to topnotch-tech
-- npm install
-- npm i bootstrap
-- src - components - Navbar.js
-- rfc
-- npm i react-router-dom
-  import { BrowserRouter, Route, Routes } from "react-router-dom";
-  <BrowserRouter>
-  <Routes>
-  <Route exact path="/" element={<Homescreen/>}/>
-  </Routes>
-  </BrowserRouter>
-
-- npm i react-rating
-https://www.npmjs.com/package/react-rating
-http://dreyescat.github.io/react-rating/
-# topnotch-tech
+The build is a static single-page app. Hosts must serve `index.html` for unknown
+paths so routes like `/product/3` work on refresh. `public/_redirects` handles this
+on Netlify; on Vercel add a rewrite to `/index.html`.

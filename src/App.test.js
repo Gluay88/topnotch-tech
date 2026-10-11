@@ -63,10 +63,10 @@ describe("checkout validation", () => {
 it("filters products by search", () => {
   render(<App />);
   fireEvent.change(screen.getByLabelText("Search products"), {
-    target: { value: "victrola" },
+    target: { value: "smartwatch" },
   });
   expect(screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent)).toContain(
-    products[8].name
+    products[7].name
   );
   expect(screen.queryByText(products[0].name)).not.toBeInTheDocument();
 });

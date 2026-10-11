@@ -46,7 +46,7 @@ export default function Homescreen() {
             <input
               type="search"
               className="form-control"
-              placeholder="Search headphones, laptops, mice..."
+              placeholder="Search earbuds, laptops, chargers..."
               aria-label="Search products"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
